@@ -1,0 +1,360 @@
+/* ==========================================================
+   Compack - Kemasan makanan pengganti styrofoam
+   style.css
+   ========================================================== */
+
+:root {
+  --green-900: #1f4d26;
+  --green-700: #2e7d32;
+  --green-400: #a5d66a;
+  --cream-100: #f4f1bd;
+  --cream-50: #fbf9dc;
+  --cup: #e6d8b4;
+  --cup-dark: #cdbb8d;
+  --yellow: #f6c93b;
+  --white: #ffffff;
+  --text: #1f3a24;
+  --muted: #5d6f5f;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  --radius: 16px;
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--yellow);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+button { font-family: inherit; cursor: pointer; border: 0; }
+svg { display: block; }
+
+/* ---------- Showcase (3 layar berdampingan) ---------- */
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.label {
+  text-align: center;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--green-900);
+  background: var(--green-400);
+  padding: 6px 16px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+/* ---------- Frame HP ---------- */
+.phone {
+  position: relative;
+  width: 290px;
+  height: 580px;
+  background: var(--cream-100);
+  border-radius: 40px;
+  border: 7px solid #1c1c24;
+  outline: 3px solid #c9c4e0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82px;
+  height: 22px;
+  background: #0b0b10;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 22px 0;
+  font-size: 11px;
+  font-weight: 600;
+  height: 34px;
+  z-index: 4;
+}
+.statusbar .icons { display: flex; gap: 4px; align-items: center; }
+.on-green .statusbar { color: var(--white); }
+
+.screen {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.screen::-webkit-scrollbar { display: none; }
+
+/* ---------- Layar 1: Beranda ---------- */
+.hero {
+  background: var(--green-700);
+  color: var(--white);
+  padding: 4px 16px 18px;
+  border-radius: 0 0 28px 28px;
+}
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
+.brand .logo { width: 28px; height: 28px; }
+.icon-btn {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  display: grid; place-items: center;
+}
+.hero h1 { font-size: 16px; line-height: 1.25; margin-bottom: 6px; }
+.hero p { font-size: 9.5px; line-height: 1.5; opacity: 0.92; margin-bottom: 12px; }
+
+.search {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 9px 12px;
+  color: #9aa59b;
+  font-size: 11px;
+}
+
+.chips { display: flex; gap: 6px; padding: 14px 16px 4px; }
+.chip {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--text);
+  line-height: 1.1;
+}
+.chip.active { background: var(--green-900); color: var(--white); }
+
+.section-title {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 10px 16px 8px;
+  font-size: 12px; font-weight: 700;
+}
+.section-title a { font-size: 9px; color: var(--green-700); text-decoration: none; }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px; }
+.card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.card .thumb {
+  background: var(--cream-100);
+  border-radius: 10px;
+  height: 78px;
+  display: grid; place-items: center;
+  margin-bottom: 8px;
+}
+.card h3 { font-size: 10px; line-height: 1.3; }
+.card small { display: block; font-size: 8.5px; color: var(--muted); margin: 2px 0 4px; }
+.card .price { font-size: 10px; font-weight: 700; color: var(--green-700); }
+.card .soon { font-size: 10px; font-weight: 700; color: var(--green-700); }
+
+.promo {
+  margin: 12px 16px 70px;
+  background: var(--yellow);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 9.5px; font-weight: 600; line-height: 1.35;
+}
+.promo .gift {
+  width: 26px; height: 26px; border-radius: 8px;
+  background: var(--green-900); color: var(--white);
+  display: grid; place-items: center; flex: none;
+}
+
+/* Navigasi bawah */
+.bottom-nav {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: var(--white);
+  display: flex; justify-content: space-around;
+  padding: 8px 6px 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.bottom-nav a {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-size: 8px; font-weight: 600; color: var(--muted);
+  text-decoration: none;
+}
+.bottom-nav a.active { color: var(--green-700); }
+
+/* ---------- Layar 2: Detail produk ---------- */
+.detail-top { padding: 4px 16px 0; }
+.back {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--white); color: var(--text);
+  display: grid; place-items: center;
+}
+.detail-hero {
+  background: var(--cream-50);
+  margin-top: -6px;
+  padding: 0 0 18px;
+  display: flex; flex-direction: column; align-items: center;
+  border-radius: 0 0 40px 40px;
+}
+.size-badge {
+  background: var(--green-700); color: var(--white);
+  font-size: 9px; font-weight: 600;
+  padding: 4px 14px; border-radius: 999px;
+}
+.detail-body { padding: 14px 16px 90px; background: var(--cream-100); }
+.title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.title-row h2 { font-size: 15px; line-height: 1.2; }
+.title-row .price { text-align: right; font-size: 14px; font-weight: 700; color: var(--green-700); }
+.title-row .price small { display: block; font-size: 8px; font-weight: 400; color: var(--muted); }
+.desc { font-size: 9.5px; line-height: 1.5; color: var(--muted); margin: 8px 0 12px; }
+
+.specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+.spec {
+  background: var(--white); border-radius: 10px;
+  padding: 7px 4px; text-align: center;
+  font-size: 8px; color: var(--muted);
+}
+.spec b { display: block; font-size: 11px; color: var(--text); margin-top: 2px; }
+
+.sub-title { font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  background: var(--green-700); color: var(--white);
+  font-size: 9px; font-weight: 600;
+  padding: 6px 10px; border-radius: 999px;
+}
+.tag.dark { background: var(--green-900); }
+
+.action-bar {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: var(--white);
+  display: flex; gap: 10px; align-items: center;
+  padding: 10px 14px 18px;
+}
+.qty {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--cream-100);
+  border-radius: 12px; padding: 8px 12px;
+  font-size: 11px; font-weight: 700;
+}
+.qty button { background: none; font-size: 14px; color: var(--text); font-weight: 700; }
+
+.btn {
+  flex: 1;
+  background: var(--green-700); color: var(--white);
+  font-size: 11px; font-weight: 700;
+  padding: 12px; border-radius: 12px;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.btn:hover { background: var(--green-900); }
+.btn:active { transform: scale(0.97); }
+
+/* ---------- Layar 3: Kemasan kustom ---------- */
+.custom-top {
+  display: flex; align-items: center; gap: 10px;
+  padding: 4px 16px 10px;
+  font-weight: 700; font-size: 13px;
+}
+.preview {
+  position: relative;
+  margin: 0 14px;
+  background: var(--cream-50);
+  border-radius: 18px;
+  height: 150px;
+  display: grid; place-items: center;
+}
+.preview .badge {
+  position: absolute; top: 8px; right: 8px;
+  background: var(--green-700); color: var(--white);
+  font-size: 8px; font-weight: 600;
+  padding: 3px 10px; border-radius: 999px;
+}
+.form { padding: 12px 16px 80px; }
+.form .sub-title { margin-top: 10px; }
+
+.sizes { display: flex; gap: 6px; }
+.size {
+  flex: 1;
+  background: var(--white); color: var(--text);
+  font-size: 9px; font-weight: 600;
+  padding: 9px 4px; border-radius: 9px;
+  border: 1.5px solid transparent;
+}
+.size.active { background: var(--green-700); color: var(--white); }
+
+.upload {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  border: 1.5px dashed var(--green-700);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 10px; font-weight: 600; color: var(--green-700);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.swatches { display: flex; gap: 10px; }
+.swatch {
+  width: 24px; height: 24px; border-radius: 50%;
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+}
+.swatch.active { outline-color: var(--green-900); outline-offset: 2px; }
+
+.toggle-row {
+  margin-top: 12px;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 9px 12px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 9.5px; font-weight: 600;
+}
+.switch {
+  position: relative; width: 34px; height: 18px;
+  background: var(--green-700); border-radius: 999px;
+}
+.switch::after {
+  content: ""; position: absolute; top: 2px; right: 2px;
+  width: 14px; height: 14px; border-radius: 50%; background: var(--white);
+}
+
+.cta-bar {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: var(--white);
+  padding: 10px 14px 18px;
+}
+.cta-bar .btn { width: 100%; }
+
+/* ---------- Label di cup kustom ---------- */
+.logo-label {
+  font-size: 7px; font-weight: 800; letter-spacing: 0.3px;
+  fill: var(--green-900);
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 560px) {
+  body { padding: 20px 8px; }
+  .phone { width: 100%; max-width: 320px; }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compack - Kemasan Pengganti Styrofoam</title>
+  <meta name="description" content="Kemasan makanan dari sekam padi, pati, dan chitosan. Mudah terurai dan bisa jadi kompos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SVG sprite: logo & cup dipakai ulang di 3 layar -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="logo" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="19" fill="#f6c93b" stroke="#1f4d26" stroke-width="1.5"/>
+        <circle cx="20" cy="20" r="15.5" fill="none" stroke="#1f4d26" stroke-width="1.2"/>
+        <path d="M11 18c1-6 6-9 11-9-1 6-5 10-11 9z" fill="#8fc24b" stroke="#1f4d26" stroke-width="1"/>
+        <path d="M11 22h18c0 5-4 8-9 8s-9-3-9-8z" fill="none" stroke="#1f4d26" stroke-width="1.5"/>
+        <path d="M28 12v7M26 14l2 2 2-2M26 17l2 2 2-2" stroke="#1f4d26" stroke-width="1" fill="none"/>
+      </symbol>
+
+      <symbol id="cup" viewBox="0 0 100 110">
+        <ellipse cx="50" cy="102" rx="32" ry="4" fill="rgba(0,0,0,.12)"/>
+        <rect x="14" y="6" width="72" height="12" rx="4" fill="#cdbb8d"/>
+        <path d="M18 18h64l-7 78a6 6 0 0 1-6 5H31a6 6 0 0 1-6-5z" fill="#e6d8b4"/>
+        <circle cx="50" cy="56" r="13" fill="#2e7d32"/>
+        <path d="M44 62c0-8 5-12 12-13 0 8-4 13-12 13z" fill="#f6c93b"/>
+      </symbol>
+
+      <symbol id="box" viewBox="0 0 100 70">
+        <ellipse cx="50" cy="62" rx="36" ry="4" fill="rgba(0,0,0,.12)"/>
+        <path d="M10 26h80l-6 30a8 8 0 0 1-8 6H24a8 8 0 0 1-8-6z" fill="#e6d8b4"/>
+        <path d="M10 26c0-8 20-12 40-12s40 4 40 12z" fill="#cdbb8d"/>
+        <circle cx="50" cy="38" r="8" fill="#2e7d32"/>
+        <path d="M46 42c0-5 3-7 7-8 0 5-2 8-7 8z" fill="#f6c93b"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="showcase">
+
+    <!-- ================= LAYAR 1: BERANDA ================= -->
+    <section>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen" style="background:var(--cream-100)">
+
+          <div class="hero on-green">
+            <div class="statusbar">
+              <span>9:41</span>
+              <span class="icons">▂▄▆ ▮</span>
+            </div>
+            <div class="hero-top">
+              <div class="brand">
+                <svg class="logo"><use href="#logo"/></svg> Compack
+              </div>
+              <button class="icon-btn" aria-label="Notifikasi">🔔</button>
+            </div>
+            <h1>Kemasan makanan pengganti styrofoam</h1>
+            <p>Dari sekam padi, pati, dan chitosan. Mudah terurai dan bisa jadi kompos.</p>
+            <label class="search">
+              🔍 <span>Cari cup, kotak makan...</span>
+            </label>
+          </div>
+
+          <div class="chips">
+            <span class="chip active">Semua</span>
+            <span class="chip">Cup</span>
+            <span class="chip">Kotak<br />makan</span>
+            <span class="chip">Kustom</span>
+          </div>
+
+          <div class="section-title">
+            <span>Produk populer</span>
+            <a href="#">Lihat semua</a>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="thumb"><svg width="46" height="52"><use href="#cup"/></svg></div>
+              <h3>Cup Compack 630 mL</h3>
+              <small>Isi 12 pcs per lusin</small>
+              <span class="price">Rp30.000 <small style="display:inline">/lusin</small></span>
+            </article>
+
+            <article class="card">
+              <div class="thumb"><svg width="56" height="40"><use href="#box"/></svg></div>
+              <h3>Kotak makan Compack</h3>
+              <small>Untuk katering dan restoran</small>
+              <span class="soon">Segera hadir</span>
+            </article>
+          </div>
+
+          <div class="promo">
+            <span class="gift">🎁</span>
+            <span>Kemasan berhadiah untuk pembelian minimal tertentu</span>
+          </div>
+        </div>
+
+        <nav class="bottom-nav">
+          <a class="active" href="#">🏠<span>Beranda</span></a>
+          <a href="#">▦<span>Katalog</span></a>
+          <a href="#">🛒<span>Keranjang</span></a>
+          <a href="#">👤<span>Akun</span></a>
+        </nav>
+      </div>
+      <div class="label">Dashboard</div>
+    </section>
+
+    <!-- ================= LAYAR 2: DETAIL PRODUK ================= -->
+    <section>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="statusbar"><span>9:41</span><span class="icons">▂▄▆ ▮</span></div>
+
+        <div class="screen" style="background:var(--cream-100)">
+          <div class="detail-hero">
+            <div class="detail-top" style="align-self:flex-start">
+              <button class="back" aria-label="Kembali">‹</button>
+            </div>
+            <svg width="110" height="120"><use href="#cup"/></svg>
+            <span class="size-badge">630 mL</span>
+          </div>
+
+          <div class="detail-body">
+            <div class="title-row">
+              <h2>Cup Compack<br />630 mL</h2>
+              <div class="price">Rp30.000<small>per lusin (12 pcs)</small></div>
+            </div>
+
+            <p class="desc">
+              Kemasan makanan sekali pakai dari sekam padi, pati, dan chitosan.
+              Ringan, cukup kuat, dan mudah terurai.
+            </p>
+
+            <div class="specs">
+              <div class="spec">Tinggi<b>8 cm</b></div>
+              <div class="spec">Ø atas<b>11 cm</b></div>
+              <div class="spec">Ø bawah<b>9 cm</b></div>
+            </div>
+
+            <h4 class="sub-title">Keunggulan</h4>
+            <div class="tags">
+              <span class="tag">Mudah terurai</span>
+              <span class="tag">Bahan alami</span>
+              <span class="tag">Antimikroba</span>
+              <span class="tag dark">Bisa jadi kompos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <div class="qty">
+            <button id="minus" aria-label="Kurangi">−</button>
+            <span id="qty">1</span>
+            <button id="plus" aria-label="Tambah">+</button>
+          </div>
+          <button class="btn" id="addCart">Tambah ke keranjang</button>
+        </div>
+      </div>
+      <div class="label">Pinjam Barang</div>
+    </section>
+
+    <!-- ================= LAYAR 3: KEMASAN KUSTOM ================= -->
+    <section>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="statusbar"><span>9:41</span><span class="icons">▂▄▆ ▮</span></div>
+
+        <div class="screen" style="background:var(--cream-100)">
+          <div class="custom-top">
+            <button class="back" aria-label="Kembali">‹</button>
+            Kemasan Kustom
+          </div>
+
+          <div class="preview">
+            <span class="badge">Pratinjau</span>
+            <svg width="150" height="130" viewBox="0 0 100 110">
+              <ellipse cx="50" cy="102" rx="32" ry="4" fill="rgba(0,0,0,.12)"/>
+              <rect x="14" y="6" width="72" height="12" rx="4" fill="#cdbb8d"/>
+              <path d="M18 18h64l-7 78a6 6 0 0 1-6 5H31a6 6 0 0 1-6-5z" fill="#e6d8b4"/>
+              <rect id="labelBand" x="24" y="48" width="52" height="16" fill="#f6c93b"/>
+              <text class="logo-label" x="50" y="59" text-anchor="middle">LOGO ANDA</text>
+            </svg>
+          </div>
+
+          <div class="form">
+            <h4 class="sub-title">Pilih ukuran</h4>
+            <div class="sizes">
+              <button class="size active">Cup 630 mL</button>
+              <button class="size">Kotak makan</button>
+              <button class="size">Lainnya</button>
+            </div>
+
+            <h4 class="sub-title">Logo usaha</h4>
+            <label class="upload" for="logoFile">
+              ⬆ Unggah logo (PNG atau JPG)
+            </label>
+            <input id="logoFile" type="file" accept="image/png,image/jpeg" hidden />
+
+            <h4 class="sub-title">Warna label</h4>
+            <div class="swatches" id="swatches">
+              <button class="swatch active" data-color="#f6c93b" style="background:#f6c93b" aria-label="Kuning"></button>
+              <button class="swatch" data-color="#2e7d32" style="background:#2e7d32" aria-label="Hijau tua"></button>
+              <button class="swatch" data-color="#a5d66a" style="background:#a5d66a" aria-label="Hijau muda"></button>
+              <button class="swatch" data-color="#ffffff" style="background:#ffffff;border-color:#ddd" aria-label="Putih"></button>
+            </div>
+
+            <div class="toggle-row">
+              <span>Tambah label "ramah lingkungan"</span>
+              <span class="switch"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-bar">
+          <a class="btn" style="display:block;text-align:center;text-decoration:none"
+             href="https://wa.me/6280000000000?text=Halo%20Compack%2C%20saya%20mau%20konsultasi%20desain%20kemasan"
+             target="_blank" rel="noopener">Konsultasi desain via WhatsApp</a>
+        </div>
+      </div>
+      <div class="label">Kemasan Kustom</div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
